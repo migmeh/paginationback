@@ -7,7 +7,7 @@
     "test": "jest --runInBand",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "start": "nodemon server"
+    "start": "nodemon server.js"
   },
   "jest": {
     "testEnvironment": "node"
