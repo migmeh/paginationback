@@ -38,5 +38,12 @@ npm start
 ```
 http://localhost:8080/api/tutorials?page=1&size=5
 ```
-
+### testing
+```
+npm test
+```
+### jest --coverage
+```
+npm run test:coverage
+```
 
