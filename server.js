@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-var corsOptions = {
+let corsOptions = {
   origin: "*"
 };
 
@@ -32,3 +32,7 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+
+
+

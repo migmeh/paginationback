@@ -1,6 +1,6 @@
 const db = require("../models");
 const Tutorial = db.tutorials;
-const Op = db.Sequelize.Op;
+const Op = db.Sequelize.Op; //ORM
 
 const getPagination = (page, size) => {
   const limit = size ? +size : 3;
@@ -50,7 +50,7 @@ exports.create = (req, res) => {
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
   const { page, size, title } = req.query;
-  var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+  let condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
   const { limit, offset } = getPagination(page, size);
 
