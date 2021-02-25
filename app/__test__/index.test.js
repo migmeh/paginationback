@@ -1,45 +1,38 @@
 const supertest = require("supertest");
-const app = require("../routes/turorial.routes");
+const app = require("../../app");
 
-
-it('Testing to see if Jest works', () => {
-    expect(1).toBe(1)
-})
-
-/*
 const request = supertest(app)
 
 let testServer
 beforeAll(()=>{
-    testServer = app.listen(8080);
-});
-
-afterAll((done)=>{
-    testServer.close(done);
+    testServer = app.listen(4000);
 });
 
 
+afterAll(done => {
+    testServer.close();
+    done();
+});
 
-describe('GET /api/tutorials?page=1&size=5', ()=> {
 
+describe('test for jest', ()=> {
+    it('Testing to see if Jest works', () => {
+        expect(1).toBe(1)
+    })
+});
 
-    it('Gets the test endpoint', async done => {
+describe('test for endpoint', ()=>{
+
+    it('gets the test endpoint', async done => {
         const response = await request.get('/api/tutorials?page=1&size=5')
-        expect(response.status).toBe(200)
+
+        expect(response.error).toBe(false);
+        expect(response.status).toBe(200);
         done()
     })
 
-/!*it('returns info', async ()=>{
-    const response = await request(app).get('/api/tutorials?page=1&size=5');
-    expect(response.error).toBe(false);
-    expect(response.status).toBe(200);
-})*!/
 });
 
 
 
-
-
-
-*/
 
