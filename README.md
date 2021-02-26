@@ -42,7 +42,7 @@ http://localhost:8080/api/tutorials?page=1&size=5
 ```
 npm test
 ```
-### jest --coverage
+### coverage
 ```
 npm run test:coverage
 ```

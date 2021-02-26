@@ -29,6 +29,9 @@ describe('test for endpoint', ()=>{
         expect(response.error).toBe(false);
         expect(response.status).toBe(200);
         expect(response.body.body).not.toBeNull();
+        expect(response.body.body).not.toBeNull();
+
+
         done()
     })
 
